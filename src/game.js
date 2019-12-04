@@ -12,7 +12,12 @@ const GAMESTATE = {
   GAMEOVER: 3,
   NEWLEVEL: 4
 };
-
+function loadAudio(url)
+{
+	var au = new Audio();
+	au.src = url;
+	return au;
+}
 export default class Game {
   constructor(gameWidth, gameHeight, bricksPerRow) {
     this.gameWidth = gameWidth;
@@ -23,6 +28,7 @@ export default class Game {
     this.gameObjects = [];
     this.bricks = [];
     this.lives = 3;
+    this.explosionAu = loadAudio('./../sound/Explosion.mp3');
 
     this.levels = [level1, level2];
     this.currentLevel = 0;
