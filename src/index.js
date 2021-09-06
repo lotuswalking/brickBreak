@@ -1,4 +1,4 @@
-import Game from "./src/game.js";
+import Game from "./game.js";
 // import Game = require('/src/game.js');
 // import shape = require("./IShape"); 
 
